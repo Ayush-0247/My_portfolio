@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import img from "../assets/img.jpg";
+import img from "../assets/img2.png";
 
 const NAME = "AYUSH RAJ";
 const TYPE_SPEED = 130;
@@ -7,7 +7,7 @@ const DELETE_SPEED = 70;
 const PAUSE_AFTER_TYPE = 1800;
 const PAUSE_AFTER_DELETE = 400;
 
-function Hero() {
+function Hero({ onButtonClick }) {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -24,7 +24,7 @@ function Hero() {
         : NAME.slice(0, displayText.length + 1);
       timeout = setTimeout(
         () => setDisplayText(next),
-        isDeleting ? DELETE_SPEED : TYPE_SPEED
+        isDeleting ? DELETE_SPEED : TYPE_SPEED,
       );
     }
 
@@ -46,16 +46,19 @@ function Hero() {
 
         <p className="mt-6 max-w-md text-sm leading-relaxed text-slate-500">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Voluptatibus, unde mollitia! Accusantium, quidem. Cumque
-          consequuntur, saepe velit maiores aliquid veritatis adipisci.
-          Libero amet asperiores odio voluptatibus fugit accusantium
-          similique consequuntur omnis, cumque ad exercitationem quia iste
-          reiciendis dicta velit excepturi perferendis inventore dolorem?
-          Corporis nihil cum, voluptate laborum hic temporibus vel
-          praesentium perspiciatis dolorum id assumenda voluptatem facilis.
+          Voluptatibus, unde mollitia! Accusantium, quidem. Cumque consequuntur,
+          saepe velit maiores aliquid veritatis adipisci. Libero amet asperiores
+          odio voluptatibus fugit accusantium similique consequuntur omnis,
+          cumque ad exercitationem quia iste reiciendis dicta velit excepturi
+          perferendis inventore dolorem? Corporis nihil cum, voluptate laborum
+          hic temporibus vel praesentium perspiciatis dolorum id assumenda
+          voluptatem facilis.
         </p>
 
-        <button className="mt-8 w-fit bg-slate-800 text-rose-50 text-sm font-semibold tracking-wide px-7 py-3.5 rounded-full hover:bg-slate-700 transition-colors">
+        <button
+          onClick={onButtonClick}
+          className="mt-8 w-fit bg-slate-800 text-rose-50 text-sm font-semibold tracking-wide px-7 py-3.5 rounded-full hover:bg-slate-700 transition-colors"
+        >
           KNOW ABOUT ME →
         </button>
       </div>
@@ -65,7 +68,7 @@ function Hero() {
         <div className="mb-5" />
         <img
           src={img}
-          className="relative z-10 h-4/5 w-auto max-w-sm object-cover shadow-xl"
+          className=""
           alt="Ayush Raj"
         />
       </div>
