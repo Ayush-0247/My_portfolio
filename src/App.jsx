@@ -2,8 +2,10 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import { useState } from "react";
+import Preloader from "./components/Preloader";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
+   const [loading, setLoading] = useState(true);
 
   const smoothScroll = (targetY, duration) => {
     const startY = window.pageYOffset;
@@ -40,6 +42,8 @@ const App = () => {
   };
   return (
     <div>
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
+      <div style={{ visibility: loading ? "hidden" : "visible" }}></div>
       <Header />
       <Hero onButtonClick={handleClick} />
       {showAbout && <About />}
