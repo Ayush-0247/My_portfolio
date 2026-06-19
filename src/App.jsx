@@ -5,7 +5,7 @@ import { useState } from "react";
 import Preloader from "./components/Preloader";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
-   const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const smoothScroll = (targetY, duration) => {
     const startY = window.pageYOffset;
@@ -34,17 +34,14 @@ const App = () => {
     setTimeout(() => {
       const about = document.getElementById("about");
 
-      smoothScroll(
-        about.offsetTop,
-        1000,
-      );
+      smoothScroll(about.offsetTop, 1000);
     }, 100);
   };
   return (
     <div>
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
       <div style={{ visibility: loading ? "hidden" : "visible" }}></div>
-      <Header />
+      {/* <Header /> */}
       <Hero onButtonClick={handleClick} />
       {showAbout && <About />}
     </div>
