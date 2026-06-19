@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import { useState } from "react";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
@@ -42,7 +43,13 @@ const App = () => {
     <div>
       <Header />
       <Hero onButtonClick={handleClick} />
-      {showAbout && <About />}
+      {showAbout && 
+      <>
+        <About />
+         <Footer />
+          </>
+      }
+     
     </div>
   );
 };
