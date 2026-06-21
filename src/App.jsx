@@ -8,7 +8,7 @@ import { useState } from "react";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
   const robotMessage = showAbout
-    ? "Hello! I am Shreya, How may i help you today! dbfvjkdf m d gbew gw eg  we g we g wet g wgwe g ew  gbw e gbjew  hew v ew ?"
+    ? "Hello! I am Shreya, How may i help you today! ?"
     : "Click the button to learn more!";
 
   const smoothScroll = (targetY, duration) => {

@@ -1,29 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { askAI } from "../gemini";
 export default function Robot({ className = "", message = "" }) {
-const [question, setQuestion] = useState("");
-const [response, setResponse] = useState(message);
-const [loading, setLoading] = useState(false);
+  const [question, setQuestion] = useState("");
+  const [response, setResponse] = useState(message);
+  const [loading, setLoading] = useState(false);
 
-const handleAskAI = async () => {
-  if (!question.trim()) return;
+  const handleAskAI = async () => {
+    if (!question.trim()) return;
 
-  try {
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    const reply = await askAI(question);
+      const reply = await askAI(question);
 
-    setResponse(reply);
-    setQuestion("");
-  } catch (error) {
-    console.error(error);
-    setResponse("Sorry, I couldn't process that.");
-  } finally {
-    setLoading(false);
-  }
-};
+      setResponse(reply);
+      setQuestion("");
+    } catch (error) {
+      console.error(error);
+      setResponse("Sorry, I couldn't process that.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
+    console.log("New message:", message);
+    setResponse(message);
+  }, [message]);
 
   return (
     <div className={className}>
@@ -48,24 +52,24 @@ const handleAskAI = async () => {
               ease: "easeInOut",
             }}
           >
-          <div className="mb-3 max-h-[200px] overflow-y-auto">
-  <p className="text-lg text-center break-words">
-    {loading ? "Thinking..." : response}
-  </p>
-</div>
+            <div className="mb-3 max-h-[200px] overflow-y-auto">
+              <p className="text-lg text-center break-words">
+                {loading ? "Thinking..." : response}
+              </p>
+            </div>
             <input
               type="text"
-            placeholder="Ask me anything..."
-            className="w-full text-center text-2xl py-3 outline-none placeholder:text-2xl"
+              placeholder="Ask me anything..."
+              className="w-full text-center text-2xl py-3 outline-none placeholder:text-2xl"
               value={question}
               onChange={(e) => {
                 setQuestion(e.target.value);
               }}
-            onKeyDown={async (e) => {
-  if (e.key === "Enter") {
-    await handleAskAI();
-  }
-}}
+              onKeyDown={async (e) => {
+                if (e.key === "Enter") {
+                  await handleAskAI();
+                }
+              }}
             />
 
             {/* Bubble Tail */}
@@ -77,9 +81,6 @@ const handleAskAI = async () => {
             />
           </motion.div>
 
-
-
-          
           <motion.div
             className="relative flex flex-col items-center"
             animate={{
