@@ -38,7 +38,7 @@ export default function Robot({ className = "", message = "" }) {
         <div className="relative flex flex-col items-center justify-center scale-95 md:scale-100">
           {/* Chat Bubble */}
           <motion.div
-            className="absolute -top-32 left-1/2 -translate-x-1/2
+            className="absolute -top-35 left-1/2 -translate-x-1/2
   w-[90vw] max-w-[400px] min-w-[200px]
   bg-white/90 backdrop-blur-md
   text-slate-800 px-5 py-3 rounded-2xl
