@@ -39,7 +39,7 @@ export default function Robot({ className = "", message = "" }) {
           {/* Chat Bubble */}
           <motion.div
             className="absolute -top-32 left-1/2 -translate-x-1/2
-  w-fit min-w-[400px] max-w-[600px]
+  w-[90vw] max-w-[400px] min-w-[200px]
   bg-white/90 backdrop-blur-md
   text-slate-800 px-5 py-3 rounded-2xl
   shadow-xl border border-slate-200 z-50"
