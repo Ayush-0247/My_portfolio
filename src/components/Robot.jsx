@@ -1,16 +1,40 @@
 import React from "react";
 import { motion } from "motion/react";
 
-export default function Robot({ className = "" }) {
+export default function Robot({ className = "", message = "" }) {
   return (
     <div className={className}>
       {" "}
-      {/* <div className="w-[350px] h-[450px] flex flex-col items-center justify-center select-none font-sans">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-gradient-to-r from-[#AECFFF] to-[#5197F7] opacity-90 rounded-full blur-[80px]" /> */}
       <div className="w-[350px] h-[450px] flex flex-col items-center justify-center select-none font-sans">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px]  rounded-full blur-[80px]" />
 
         <div className="relative flex flex-col items-center justify-center scale-95 md:scale-100">
+          {/* Chat Bubble */}
+          <motion.div
+            className="absolute -top-32 left-1/2 -translate-x-1/2
+             min-w-[270px] max-w-[370px]
+             bg-white/90 backdrop-blur-md
+             text-slate-800 px-5 py-3 rounded-2xl
+             shadow-xl border border-slate-200 z-50"
+            animate={{
+              y: [0, -6, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <p className="text-2xl text-center">{message}</p>
+
+            {/* Bubble Tail */}
+            <div
+              className="absolute left-1/2 -translate-x-1/2
+               -bottom-2 w-4 h-4 bg-white
+               border-r border-b border-slate-200
+               rotate-45"
+            />
+          </motion.div>
           <motion.div
             className="relative flex flex-col items-center"
             animate={{

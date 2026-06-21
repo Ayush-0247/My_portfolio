@@ -7,6 +7,9 @@ import Robot from "./components/Robot";
 import { useState } from "react";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
+ const robotMessage = showAbout
+  ? "Hello! I am Shreya, How may i help you today!?"
+  : "Click the button to learn more!";
 
   const smoothScroll = (targetY, duration) => {
     const startY = window.pageYOffset;
@@ -48,7 +51,7 @@ const App = () => {
           <Footer />
         </>
       )}
-      <Robot className="fixed bottom-10 right-8 z-[9999] origin-bottom-right scale-[0.5]" />
+      <Robot  message={robotMessage} className="fixed bottom-10 right-8 z-[9999] origin-bottom-right scale-[0.5]" />
     </div>
   );
 };
