@@ -1,7 +1,30 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
-
+import { askAI } from "../gemini";
 export default function Robot({ className = "", message = "" }) {
+const [question, setQuestion] = useState("");
+const [response, setResponse] = useState(message);
+const [loading, setLoading] = useState(false);
+
+const handleAskAI = async () => {
+  if (!question.trim()) return;
+
+  try {
+    setLoading(true);
+
+    const reply = await askAI(question);
+
+    setResponse(reply);
+    setQuestion("");
+  } catch (error) {
+    console.error(error);
+    setResponse("Sorry, I couldn't process that.");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
   return (
     <div className={className}>
       {" "}
@@ -12,10 +35,10 @@ export default function Robot({ className = "", message = "" }) {
           {/* Chat Bubble */}
           <motion.div
             className="absolute -top-32 left-1/2 -translate-x-1/2
-             min-w-[270px] max-w-[370px]
-             bg-white/90 backdrop-blur-md
-             text-slate-800 px-5 py-3 rounded-2xl
-             shadow-xl border border-slate-200 z-50"
+  w-fit min-w-[400px] max-w-[600px]
+  bg-white/90 backdrop-blur-md
+  text-slate-800 px-5 py-3 rounded-2xl
+  shadow-xl border border-slate-200 z-50"
             animate={{
               y: [0, -6, 0],
             }}
@@ -25,7 +48,25 @@ export default function Robot({ className = "", message = "" }) {
               ease: "easeInOut",
             }}
           >
-            <p className="text-2xl text-center">{message}</p>
+          <div className="mb-3 max-h-[200px] overflow-y-auto">
+  <p className="text-lg text-center break-words">
+    {loading ? "Thinking..." : response}
+  </p>
+</div>
+            <input
+              type="text"
+            placeholder="Ask me anything..."
+            className="w-full text-center text-2xl py-3 outline-none placeholder:text-2xl"
+              value={question}
+              onChange={(e) => {
+                setQuestion(e.target.value);
+              }}
+            onKeyDown={async (e) => {
+  if (e.key === "Enter") {
+    await handleAskAI();
+  }
+}}
+            />
 
             {/* Bubble Tail */}
             <div
@@ -35,6 +76,10 @@ export default function Robot({ className = "", message = "" }) {
                rotate-45"
             />
           </motion.div>
+
+
+
+          
           <motion.div
             className="relative flex flex-col items-center"
             animate={{
