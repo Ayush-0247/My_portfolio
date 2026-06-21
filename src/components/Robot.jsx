@@ -12,7 +12,7 @@ export default function Robot({ className = "", message = "" }) {
           {/* Chat Bubble */}
           <motion.div
             className="absolute -top-32 left-1/2 -translate-x-1/2
-             min-w-[220px] max-w-[320px]
+             min-w-[270px] max-w-[370px]
              bg-white/90 backdrop-blur-md
              text-slate-800 px-5 py-3 rounded-2xl
              shadow-xl border border-slate-200 z-50"
@@ -25,7 +25,7 @@ export default function Robot({ className = "", message = "" }) {
               ease: "easeInOut",
             }}
           >
-            <p className="text-sm text-center">{message}</p>
+            <p className="text-2xl text-center">{message}</p>
 
             {/* Bubble Tail */}
             <div
