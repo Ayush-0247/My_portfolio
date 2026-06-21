@@ -51,7 +51,7 @@ const App = () => {
           <Footer />
         </>
       )}
-      <Robot  message={robotMessage} className="fixed bottom-10 right-8 z-[9999] origin-bottom-right scale-[0.5]" />
+      <Robot  message={robotMessage} className="fixed bottom-0 right-0 z-[9999] origin-bottom-right scale-[0.5]" />
     </div>
   );
 };
