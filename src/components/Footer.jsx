@@ -27,14 +27,14 @@ function LinkedinIcon({ size = 40 }) {
 import { Globe } from "lucide-react";
 function Footer() {
   return (
-    <footer className="bg-white mt-2 px-6 md:px-16 py-16 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-8">
+    <footer className="bg-white mt-2 px-5 sm:px-8 md:px-16 py-12 sm:py-16 border-t border-gray-100">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-10 md:gap-8">
         {/* left: message */}
         <div className="flex-1 max-w-md">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
             Thanks, Bye!
           </h1>
-          <p className="text-sm text-gray-500 leading-relaxed mt-4">
+          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mt-3 sm:mt-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Architecto, veniam magnam? Qui illo dolor nulla inventore itaque
             aliquam, voluptatum esse eius aliquid, minus deleniti. Quae
@@ -43,12 +43,12 @@ function Footer() {
         </div>
 
         {/* right: link columns */}
-        <div className="flex gap-16 md:gap-24">
+        <div className="flex gap-10 sm:gap-16 md:gap-24 flex-wrap">
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 sm:mb-4">
               About
             </h2>
-            <ul className="flex flex-col gap-2.5 text-sm text-gray-700">
+            <ul className="flex flex-col gap-2 sm:gap-2.5 text-xs sm:text-sm text-gray-700">
               <li className="hover:text-black cursor-pointer transition-colors">
                 About
               </li>
@@ -65,17 +65,17 @@ function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 sm:mb-4">
               Connect with me
             </h2>
-            <ul className="flex flex-col gap-2.5 text-sm text-gray-700">
+            <ul className="flex flex-col gap-2 sm:gap-2.5 text-xs sm:text-sm text-gray-700">
               <a
                 href="https://github.com/Ayush-0247"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-2">
-                  <GithubIcon size={21} />
+                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-1.5 sm:gap-2">
+                  <GithubIcon size={18} />
                   GitHub
                 </li>
               </a>
@@ -84,8 +84,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-2">
-                  <LinkedinIcon size={21} />
+                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-1.5 sm:gap-2">
+                  <LinkedinIcon size={18} />
                   LinkedIn
                 </li>
               </a>
@@ -94,8 +94,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-2">
-                  <Globe size={21} />
+                <li className="hover:text-black cursor-pointer transition-colors flex items-center gap-1.5 sm:gap-2">
+                  <Globe size={18} />
                   Ciphervest Capital
                 </li>
               </a>
@@ -105,7 +105,7 @@ function Footer() {
       </div>
 
       {/* bottom bar */}
-      <div className="max-w-6xl mx-auto mt-16 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+      <div className="max-w-6xl mx-auto mt-12 sm:mt-16 pt-5 sm:pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-xs text-gray-400">
         <p>© {new Date().getFullYear()} All rights reserved.</p>
         <p>Built with care.</p>
       </div>
@@ -114,3 +114,4 @@ function Footer() {
 }
 
 export default Footer;
+
