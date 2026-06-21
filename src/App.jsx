@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Robot from "./components/Robot";
+
 import { useState } from "react";
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
@@ -33,23 +35,20 @@ const App = () => {
     setTimeout(() => {
       const about = document.getElementById("about");
 
-      smoothScroll(
-        about.offsetTop,
-        1000,
-      );
+      smoothScroll(about.offsetTop, 1000);
     }, 100);
   };
   return (
-    <div>
+    <div className="relative">
       <Header />
       <Hero onButtonClick={handleClick} />
-      {showAbout && 
-      <>
-        <About />
-         <Footer />
-          </>
-      }
-     
+      {showAbout && (
+        <>
+          <About />
+          <Footer />
+        </>
+      )}
+      <Robot className="fixed bottom-10 right-8 z-[9999] origin-bottom-right scale-[0.5]" />
     </div>
   );
 };
