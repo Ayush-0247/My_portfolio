@@ -219,7 +219,7 @@ export default function Hero({ onButtonClick }) {
       {/* nav */}
       <nav className="relative z-10 flex items-center justify-between px-6 sm:px-10 lg:px-16 py-5">
         <div className="text-lg font-bold text-[#1e3a5f] tracking-tight">
-          AR<span className="text-blue-500">.</span>
+          <span className="text-blue-500">.</span>
         </div>
         {/* <div className="hidden md:flex items-center gap-8">
           {["About", "Projects", "Skills"].map((l) => (
