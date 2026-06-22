@@ -265,9 +265,9 @@ export default function Hero({ onButtonClick }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-blue-100 text-slate-500 hover:text-blue-500 hover:border-blue-400 hover:-translate-y-0.5 transition-all"
+              className="w-13 h-13 flex items-center justify-center rounded-full bg-white border border-blue-100 text-slate-500 hover:text-blue-500 hover:border-blue-400 hover:-translate-y-0.5 transition-all"
             >
-              <Icon size={16} />
+              <Icon size={25} />
             </a>
           ))}
         </div>
