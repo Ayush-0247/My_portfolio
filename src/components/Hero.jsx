@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import img from "../assets/img2.png";
-const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
 import { FaWhatsapp } from "react-icons/fa";
+
+const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
 const NAME = "AYUSH RAJ";
 const TYPE_SPEED = 130;
 const DELETE_SPEED = 70;
@@ -21,6 +22,7 @@ function GithubIcon({ size = 40 }) {
     </svg>
   );
 }
+
 function LinkedinIcon({ size = 40 }) {
   return (
     <svg
@@ -39,8 +41,6 @@ function Hero({ onButtonClick }) {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
-
   useEffect(() => {
     let timeout;
 
@@ -54,7 +54,7 @@ function Hero({ onButtonClick }) {
         : NAME.slice(0, displayText.length + 1);
       timeout = setTimeout(
         () => setDisplayText(next),
-        isDeleting ? DELETE_SPEED : TYPE_SPEED,
+        isDeleting ? DELETE_SPEED : TYPE_SPEED
       );
     }
 
@@ -62,67 +62,86 @@ function Hero({ onButtonClick }) {
   }, [displayText, isDeleting]);
 
   return (
-    <div className="relative h-screen flex bg-rose-50">
-      <div className="absolute z-10 top-0 left-0 w-full ">
-        <div className="flex justify-end p-4 gap-8  w-full">
+    <div className="relative min-h-screen flex flex-col lg:flex-row bg-rose-50">
+
+      {/* Social icons — top right on all sizes */}
+      <div className="absolute z-10 top-0 left-0 w-full pointer-events-none">
+        <div className="flex justify-end p-4 gap-4 sm:gap-6 lg:gap-8 pointer-events-auto">
           <a
             href={`https://wa.me/${phone}?text=Hi%20Ayush,%20I%20visited%20your%20portfolio`}
             target="_blank"
             rel="noopener noreferrer"
+            className="text-slate-700 hover:text-rose-500 transition-colors"
+            aria-label="WhatsApp"
           >
-            <FaWhatsapp size={40} />
+            <FaWhatsapp size={28} className="sm:w-9 sm:h-9 lg:w-10 lg:h-10" />
           </a>
           <a
             href="https://github.com/Ayush-0247"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-slate-700 hover:text-rose-500 transition-colors"
+            aria-label="GitHub"
           >
-            <GithubIcon />
+            <GithubIcon size={28} />
           </a>
-
           <a
             href="https://www.linkedin.com/in/your-linkedin-username/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-slate-700 hover:text-rose-500 transition-colors"
+            aria-label="LinkedIn"
           >
-            <LinkedinIcon />
+            <LinkedinIcon size={28} />
           </a>
         </div>
       </div>
-      {/* left side */}
-      <div className="flex-1 flex flex-col justify-center px-10 lg:px-16">
-        <span className="text-sm font-semibold tracking-widest text-rose-400 uppercase">
+
+      {/* ── Mobile/Tablet: stacked, image on top ── */}
+      {/* Image panel — shown first on small screens, hidden on lg+ */}
+      <div className="lg:hidden w-full bg-rose-100 flex items-end justify-center pt-20 pb-0 overflow-hidden">
+        <img
+          src={img}
+          alt="Ayush Raj"
+          className="w-56 xs:w-64 sm:w-80 object-contain drop-shadow-lg"
+        />
+      </div>
+
+      {/* Text panel — full width on small, left half on lg+ */}
+      <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-10 lg:py-0">
+        <span className="text-xs sm:text-sm font-semibold tracking-widest text-rose-400 uppercase">
           Hey! I am
         </span>
 
-        <h1 className="mt-3 text-5xl lg:text-6xl font-extrabold text-slate-800 tracking-tight min-h-[1.2em]">
+        <h1 className="mt-2 sm:mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-800 tracking-tight min-h-[1.2em]">
           {displayText}
-          <span className="inline-block w-1 h-12 bg-slate-800 ml-1 align-middle animate-pulse" />
+          <span className="inline-block w-[3px] h-9 sm:h-11 lg:h-12 bg-slate-800 ml-1 align-middle animate-pulse" />
         </h1>
 
-        <p className="mt-6 max-w-md text-sm leading-relaxed text-slate-500">
+        <p className="mt-4 sm:mt-6 max-w-md text-sm leading-relaxed text-slate-500">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Voluptatibus, unde mollitia! Accusantium, quidem. Cumque consequuntur,
           saepe velit maiores aliquid veritatis adipisci. Libero amet asperiores
           odio voluptatibus fugit accusantium similique consequuntur omnis,
           cumque ad exercitationem quia iste reiciendis dicta velit excepturi
-          perferendis inventore dolorem? Corporis nihil cum, voluptate laborum
-          hic temporibus vel praesentium perspiciatis dolorum id assumenda
-          voluptatem facilis.
+          perferendis inventore dolorem?
         </p>
 
         <button
           onClick={onButtonClick}
-          className="mt-8 w-fit bg-slate-800 text-rose-50 text-sm font-semibold tracking-wide px-7 py-3.5 rounded-full hover:bg-slate-700 transition-colors"
+          className="mt-6 sm:mt-8 w-fit bg-slate-800 text-rose-50 text-xs sm:text-sm font-semibold tracking-wide px-6 sm:px-7 py-3 sm:py-3.5 rounded-full hover:bg-slate-700 active:scale-95 transition-all"
         >
           KNOW ABOUT ME →
         </button>
       </div>
 
-      {/* right side */}
-      <div className="flex-1 relative flex items-center justify-center bg-rose-100 overflow-hidden">
-        <div className="mb-5" />
-        <img src={img} className="" alt="Ayush Raj" />
+      {/* ── Desktop: image panel on the right ── */}
+      <div className="hidden lg:flex flex-1 relative items-center justify-center bg-rose-100 overflow-hidden">
+        <img
+          src={img}
+          alt="Ayush Raj"
+          className="object-contain h-[90%] max-h-[600px] drop-shadow-lg"
+        />
       </div>
     </div>
   );
