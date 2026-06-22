@@ -5,13 +5,26 @@ import Robot from "./components/Robot";
 import Experiences from "./components/Experiences";
 import Project from "./components/Project";
 import { useState } from "react";
+
 const App = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [showExperiences, setShowExperiences] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
-  const robotMessage = showAbout
-    ? "Hello! I am Shreya, How may i help you today! ?"
-    : "Click the button to learn more!";
+  // const robotMessage = showAbout
+  //   ? "Hello! I am Shreya, How may i help you today! ?"
+  //   : "Click the button to learn more!";
+
+  let robotMessage = "";
+
+  if (!showAbout) {
+    robotMessage = "Click on Know About button to know more about me!";
+  } else if (!showExperiences) {
+    robotMessage = "Click on Show Experiences button to know my experience!";
+  } else if (!showProjects) {
+    robotMessage = "Click on Show Projects button to know my projects!";
+  } else {
+    robotMessage = "Explore my projects below!";
+  }
 
   const smoothScroll = (targetY, duration) => {
     const startY = window.pageYOffset;
@@ -75,7 +88,7 @@ const App = () => {
       )}
       <Robot
         message={robotMessage}
-        className="fixed bottom-0 right-0 z-[9998] origin-bottom-right scale-[0.5]"
+        className="fixed bottom-0 right-5 z-[9999] origin-bottom-right scale-[0.5]"
       />
       {showExperiences && (
         <Experiences onButtonClick={handleClickforProjects} />

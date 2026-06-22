@@ -33,14 +33,14 @@ export default function Robot({ className = "", message = "" }) {
     <div className={className}>
       {" "}
       <div className="w-[350px] h-[450px] flex flex-col items-center justify-center select-none font-sans">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px]  rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 bg-red-200 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px]  rounded-full blur-[80px]" />
 
         <div className="relative flex flex-col items-center justify-center scale-95 md:scale-100">
           {/* Chat Bubble */}
           <motion.div
-            className="absolute -top-35 left-1/2 -translate-x-1/2
+            className="absolute -top-35 left-30 -translate-x-1/2
   w-[90vw] max-w-[400px] min-w-[200px]
-  bg-white/90 backdrop-blur-md
+  bg-blue-100 backdrop-blur-md
   text-slate-800 px-5 py-3 rounded-2xl
   shadow-xl border border-slate-200 z-50"
             animate={{
@@ -53,7 +53,7 @@ export default function Robot({ className = "", message = "" }) {
             }}
           >
             <div className="mb-3 max-h-[200px] overflow-y-auto">
-              <p className="text-lg text-center break-words">
+              <p className="text-2xl text-center break-words">
                 {loading ? "Thinking..." : response}
               </p>
             </div>
