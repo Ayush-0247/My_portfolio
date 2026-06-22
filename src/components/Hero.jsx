@@ -313,7 +313,7 @@ export default function Hero({ onButtonClick }) {
             </a>
           </div>
 
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             {[
               {
                 href: `https://wa.me/${phone}`,
@@ -343,7 +343,7 @@ export default function Hero({ onButtonClick }) {
                 <Icon size={16} />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* right — terminal */}
