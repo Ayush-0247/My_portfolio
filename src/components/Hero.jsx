@@ -221,7 +221,7 @@ export default function Hero({ onButtonClick }) {
         <div className="text-lg font-bold text-[#1e3a5f] tracking-tight">
           AR<span className="text-blue-500">.</span>
         </div>
-        <div className="hidden md:flex items-center gap-8">
+        {/* <div className="hidden md:flex items-center gap-8">
           {["About", "Projects", "Skills"].map((l) => (
             <a
               key={l}
@@ -239,6 +239,37 @@ export default function Hero({ onButtonClick }) {
           >
             Hire me
           </a>
+        </div> */}
+        <div className="flex gap-3">
+          {[
+            {
+              href: `https://wa.me/${phone}`,
+              Icon: FaWhatsapp,
+              label: "WhatsApp",
+            },
+            {
+              href: "https://github.com/Ayush-0247",
+              Icon: FaGithub,
+              label: "GitHub",
+            },
+            {
+              href: "https://linkedin.com/in/your-linkedin",
+              Icon: FaLinkedin,
+              label: "LinkedIn",
+            },
+            { href: "mailto:you@example.com", Icon: HiMail, label: "Email" },
+          ].map(({ href, Icon, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-blue-100 text-slate-500 hover:text-blue-500 hover:border-blue-400 hover:-translate-y-0.5 transition-all"
+            >
+              <Icon size={16} />
+            </a>
+          ))}
         </div>
       </nav>
 
