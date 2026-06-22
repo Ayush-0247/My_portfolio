@@ -43,7 +43,7 @@ const PROJECTS_DATA = [
 const Project = () => {
   return (
     <section
-      id="project"
+      id="projects"
       className="min-h-screen bg-gradient-to-tr from-blue-50 via-sky-50 to-white text-slate-900 px-4 sm:px-8 md:px-16 lg:px-20 py-20 md:py-28 flex flex-col justify-center overflow-hidden"
     >
       <div className="w-full max-w-7xl mx-auto space-y-16">

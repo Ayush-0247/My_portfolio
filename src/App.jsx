@@ -81,7 +81,10 @@ const App = () => {
         <Experiences  onButtonClick={handleClickforProjects} />
       )}{" "}
       {showProjects  && <Project />}
-           <Footer />
+           {/* <Footer /> */}
+           {
+            showAbout && showExperiences && showProjects && <Footer />
+           }
     </div>
   );
 };
