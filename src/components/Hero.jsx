@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import img from "../assets/img2.png";
 
+import { FaWhatsapp } from "react-icons/fa";
 const NAME = "AYUSH RAJ";
 const TYPE_SPEED = 130;
 const DELETE_SPEED = 70;
@@ -37,6 +38,7 @@ function LinkedinIcon({ size = 40 }) {
 function Hero({ onButtonClick }) {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const phone = "919939565466";
 
   useEffect(() => {
     let timeout;
@@ -62,6 +64,16 @@ function Hero({ onButtonClick }) {
     <div className="relative h-screen flex bg-rose-50">
       <div className="absolute z-10 top-0 left-0 w-full ">
         <div className="flex justify-end p-4 gap-8  w-full">
+          <a
+            href={`https://wa.me/${phone}?text=Hi%20Ayush,%20I%20visited%20your%20portfolio`}
+            target="_blank"
+            rel="noopener noreferrer"
+           
+          >
+           
+              <FaWhatsapp size={40} />
+            
+          </a>
           <a
             href="https://github.com/Ayush-0247"
             target="_blank"

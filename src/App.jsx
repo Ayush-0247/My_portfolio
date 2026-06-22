@@ -1,9 +1,7 @@
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Robot from "./components/Robot";
-import WhatsAppButton from "./components/WhatsAppButton";
 
 import { useState } from "react";
 const App = () => {
@@ -44,7 +42,6 @@ const App = () => {
   };
   return (
     <div className="relative">
-      {/* <Header /> */}
       <Hero onButtonClick={handleClick} />
       {showAbout && (
         <>
@@ -56,8 +53,6 @@ const App = () => {
         message={robotMessage}
         className="fixed bottom-0 right-0 z-[9999] origin-bottom-right scale-[0.5]"
       />
-
-      <WhatsAppButton className="fixed z-[9999] origin-bottom-right scale-[0.5]" />
     </div>
   );
 };
