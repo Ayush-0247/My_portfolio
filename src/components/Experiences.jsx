@@ -5,32 +5,69 @@ import {
   GraduationCap,
   ArrowRight,
   ShieldCheck,
+  Users,
 } from "lucide-react";
 
 const TIMELINE_DATA = [
+  {
+    id: "lifelinkr",
+    type: "work",
+    role: "Frontend Developer Intern",
+    organization: "Lifelinkr — IVF Clinic Management Software",
+    duration: "Jun 2026 — Sept 2026",
+    description:
+      "Built a pixel-perfect React and Tailwind CSS patient management dashboard featuring sidebars, treatment cycle cards, and stimulation charts with Recharts. Developed a CRM module for client details and built/connected 30+ REST APIs to the main platform.",
+    icon: Briefcase,
+    highlight: true,
+    badges: ["React", "Tailwind CSS", "Recharts", "REST APIs"],
+  },
+  {
+    id: "flinque",
+    type: "work",
+    role: "Full Stack Developer Intern",
+    organization: "Flinque — Brand and Influencer Marketplace",
+    duration: "Mar 2026 — Jun 2026",
+    description:
+      "Built the frontend and backend for 15+ influencer analysis tools calculating engagement rate, verification status, lookalike creator detection, niche matching, and comparison metrics. Helped construct role-based dashboards for Creators, Brands, and Admins.",
+    icon: Briefcase,
+    highlight: true,
+    badges: ["Full Stack", "Dashboard Architecture", "Analytics Tools"],
+  },
   {
     id: "ciphervest",
     type: "work",
     role: "Founder & CTO",
     organization: "CipherVest Capital (Prince Group)",
-    duration: "Mar 2026 — Present",
+    duration: "Jan 2026 — Present",
     description:
-      "Spearheading engineering, technical vision, and platform infrastructure for automated crypto/stock portfolio architecture. Designing low-latency system data pipelines and modular analytics schemas.",
+      "Leading full-stack development, core system architecture, and technical roadmap for a finance and crypto intelligence platform using the MERN stack. Designed backend APIs, database schemas, and frontend interfaces for real-time market data and portfolio tracking.",
     icon: Briefcase,
     highlight: true,
-    badges: ["System Architecture", "Fintech API", "Team Leadership"],
+    badges: ["MERN Stack", "System Architecture", "Product Strategy"],
   },
+  // {
+  //   id: "ece-undergrad",
+  //   type: "education",
+  //   role: "Electronics & Communication Engineering",
+  //   organization: "Engineering Undergrad",
+  //   duration: "2024 — Present",
+  //   description:
+  //     "Focusing on hardware-software boundaries, core computational networks, and telemetric signals. Partnering on multi-year development builds using real-time edge processing stacks.",
+  //   icon: GraduationCap,
+  //   highlight: false,
+  //   badges: ["Network Logic", "Telemetry Infrastructure", "Embedded Systems"],
+  // },
   {
-    id: "ece-undergrad",
-    type: "education",
-    role: "Electronics & Communication Engineering",
-    organization: "Engineering Undergrad",
-    duration: "2024 — Present",
+    id: "dsdl",
+    type: "work",
+    role: "Web Development Lead",
+    organization: "DSDL — College Society",
+    duration: "Sept 2024 — Mar 2026",
     description:
-      "Focusing on hardware-software boundaries, core computational networks, and telemetric signals. Partnering on multi-year development builds using real-time edge processing stacks.",
-    icon: GraduationCap,
-    highlight: false,
-    badges: ["Network Logic", "Telemetry Infrastructure", "Embedded Systems"],
+      "Built the frontend for event web applications handling 2,000+ concurrent users while managing UI development and deployment. Led and guided a team of 15+ junior developers, collaborating across design and backend teams to improve system reliability.",
+    icon: Users,
+    highlight: true,
+    badges: ["Team Leadership", "UI Deployment", "Cross-team Collaboration"],
   },
 ];
 
@@ -53,7 +90,7 @@ const Experiences = ({ onButtonClick }) => {
               </span>
             </h2>
           </div>
-          <div>
+          {/* <div>
             <button
               onClick={onButtonClick}
               className="group inline-flex items-center gap-2 text-sm font-bold bg-white text-[#1e3a5f] border border-blue-100 px-5 py-2.5 rounded-full hover:border-blue-400 hover:text-blue-600 shadow-xs transition-all cursor-pointer"
@@ -64,7 +101,7 @@ const Experiences = ({ onButtonClick }) => {
                 className="transition-transform group-hover:translate-x-1"
               />
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative border-l-2 border-blue-100/80 ml-4 md:ml-6 pl-6 md:pl-10 space-y-12">
@@ -73,7 +110,7 @@ const Experiences = ({ onButtonClick }) => {
             return (
               <div key={item.id} className="relative group">
                 <div
-                  className={`absolute -left-[35px] md:-left-[51px] top-1.5 w-6 h-6 md:w-8 md:h-8 rounded-full border-2 flex items-center justify-center transition-colors z-10 ${
+                  className={`absolute -left-[35px] md:-left-[56px] top-1.5 w-6 h-6 md:w-8 md:h-8 rounded-full border-2 flex items-center justify-center transition-colors z-10 ${
                     item.highlight
                       ? "bg-blue-600 border-blue-600 text-white shadow-md shadow-blue-500/20"
                       : "bg-white border-blue-200 text-slate-400 group-hover:border-blue-400 group-hover:text-blue-500"
@@ -135,9 +172,19 @@ const Experiences = ({ onButtonClick }) => {
             );
           })}
         </div>
+        <div>
+          <button
+            onClick={onButtonClick}
+            className="group inline-flex items-center gap-2 text-sm font-bold bg-white text-[#1e3a5f] border border-blue-100 px-5 py-2.5 rounded-full hover:border-blue-400 hover:text-blue-600 shadow-xs transition-all cursor-pointer"
+          >
+            View Projects
+            <ArrowRight
+              size={14}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </button>
+        </div>
       </div>
-
-     
     </section>
   );
 };

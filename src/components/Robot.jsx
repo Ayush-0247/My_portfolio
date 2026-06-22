@@ -33,7 +33,7 @@ export default function Robot({ className = "", message = "" }) {
     <div className={className}>
       {" "}
       <div className="w-[350px] h-[450px] flex flex-col items-center justify-center select-none font-sans">
-        <div className="absolute top-1/2 left-1/2 bg-red-200 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px]  rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 bg-blue-200 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]  rounded-full blur-[250px]" />
 
         <div className="relative flex flex-col items-center justify-center scale-95 md:scale-100">
           {/* Chat Bubble */}
