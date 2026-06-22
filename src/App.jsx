@@ -75,16 +75,14 @@ const App = () => {
       )}
       <Robot
         message={robotMessage}
-        className="fixed bottom-0 right-0 z-[9999] origin-bottom-right scale-[0.5]"
+        className="fixed bottom-0 right-0 z-[9998] origin-bottom-right scale-[0.5]"
       />
       {showExperiences && (
-        <Experiences  onButtonClick={handleClickforProjects} />
+        <Experiences onButtonClick={handleClickforProjects} />
       )}{" "}
-      {showProjects  && <Project />}
-           {/* <Footer /> */}
-           {
-            showAbout && showExperiences && showProjects && <Footer />
-           }
+      {showProjects && <Project />}
+      {/* <Footer /> */}
+      {showAbout && showExperiences && showProjects && <Footer />}
     </div>
   );
 };
