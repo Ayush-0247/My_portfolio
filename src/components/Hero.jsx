@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import img from "../assets/img2.png";
-
+const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
 import { FaWhatsapp } from "react-icons/fa";
 const NAME = "AYUSH RAJ";
 const TYPE_SPEED = 130;
@@ -38,7 +38,8 @@ function LinkedinIcon({ size = 40 }) {
 function Hero({ onButtonClick }) {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const phone = "919939565466";
+
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
 
   useEffect(() => {
     let timeout;
@@ -68,11 +69,8 @@ function Hero({ onButtonClick }) {
             href={`https://wa.me/${phone}?text=Hi%20Ayush,%20I%20visited%20your%20portfolio`}
             target="_blank"
             rel="noopener noreferrer"
-           
           >
-           
-              <FaWhatsapp size={40} />
-            
+            <FaWhatsapp size={40} />
           </a>
           <a
             href="https://github.com/Ayush-0247"
