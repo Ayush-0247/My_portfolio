@@ -29,14 +29,50 @@ const PROJECTS_DATA = [
   {
     id: "mission-control-lite",
     title: "Mission Control Lite",
-    subtitle: "Telemetry Monitoring System",
+    subtitle: "Satellite Telemetry Monitoring System",
     description:
-      "Real-time infrastructure system built to capture, read, and stream incoming edge hardware telemetry variables including computational temperatures, load points, and operational line voltage thresholds.",
-    tech: ["React", "Node.js", "Chart.js", "WebSockets"],
+      "Built a real-time dashboard to track and visualize sensor data including computational temperatures, load points, and operational line voltage thresholds. Uses JWT-secured RESTful APIs and a scalable backend architecture for continuous analytics.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Chart.js", "WebSockets"],
     liveUrl: null,
     githubUrl: "https://github.com/Ayush-0247/mission-control-lite",
     featured: false,
-    metric: { label: "Data Pipeline", value: "Real-time" },
+    metric: { label: "Timeline", value: "Dec 2025 – Feb 2026" },
+  },
+  {
+    id: "border-surveillance",
+    title: "Smart Border Surveillance Simulation",
+    subtitle: "Real-Time Detection & Alert System",
+    description:
+      "Developed a real-time monitoring system featuring automated alert generation and multi-category detection logic for humans, vehicles, and animals utilizing a scalable database structure.",
+    tech: ["Node.js", "Express.js", "MongoDB", "REST API"],
+    liveUrl: null,
+    githubUrl: "https://github.com/Ayush-0247/border-surveillance",
+    featured: false,
+    metric: { label: "Timeline", value: "Aug 2025 – Oct 2025" },
+  },
+  {
+    id: "community-notice-board",
+    title: "Community Notice Board",
+    subtitle: "Full-Stack CRUD Application",
+    description:
+      "Engineered a full-stack notice board with secure authentication, role-based access controls, a dynamic React UI, and optimized mobile responsiveness for seamless community engagement.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    liveUrl: null,
+    githubUrl: "https://github.com/Ayush-0247/community-board",
+    featured: false,
+    metric: { label: "Timeline", value: "June 2025 – Sept 2025" },
+  },
+  {
+    id: "restaurant-frontend",
+    title: "Restaurant Frontend Website",
+    subtitle: "Responsive UI/UX Build",
+    description:
+      "Built a responsive and visually appealing restaurant website featuring clean navigation, reusable components, and an optimized interface across multiple screen sizes.",
+    tech: ["React.js", "Tailwind CSS", "JavaScript", "HTML"],
+    liveUrl: null,
+    githubUrl: "https://github.com/Ayush-0247/restaurant-ui",
+    featured: false,
+    metric: { label: "Timeline", value: "Jun 2025 – July 2025" },
   },
 ];
 
