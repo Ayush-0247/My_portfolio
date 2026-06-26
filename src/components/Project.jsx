@@ -17,41 +17,77 @@ const PROJECTS_DATA = [
   {
     id: "flinque",
     title: "Flinque",
-    subtitle: "Analytics Interface",
+    subtitle: "Influencer Marketplace Platform",
     description:
-      "A fast, glassmorphic analytics engine that prioritizes real-time entity verification status, profile credibility processing, and user data telemetry indicators without bloated asset footprints.",
-    tech: ["React", "Tailwind CSS", "Express", "MongoDB"],
+      "An influencer marketplace connecting brands and creators. Built 15+ influencer analytics tools and a comprehensive admin dashboard for tracking platform engagement, sales, revenue, and business insights.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JavaScript",
+    ],
     liveUrl: "https://flinque.vercel.app",
     githubUrl: "https://github.com/Ayush-0247/flinque-dashboard",
     featured: false,
-    metric: { label: "Core Focus", value: "Verification" },
+    metric: { label: "Impact", value: "15+ Analytics Tools" },
   },
-{
-  id: "real-time-chat-app",
-  title: "Real Time Chat App",
-  subtitle: "WebSockets",
-  description:
-    "A real-time group chat application built with Socket.io that enables instant messaging, typing indicators, and seamless bidirectional communication between multiple users. Developed using React.js, Express.js, and Node.js with a responsive Tailwind CSS interface for a smooth chat experience.",
-  tech: [
-    "React.js",
-    "Socket.io",
-    "Express.js",
-    "Node.js",
-    "JavaScript",
-    "Tailwind CSS",
-  ],
-  liveUrl: null,
-  githubUrl: "https://github.com/Ayush-0247/web-socke-group-chat",
-  featured: false,
-  metric: { label: "Timeline", value: "Jun 2025 – Jul 2025" },
-},
+  {
+    id: "real-time-chat-app",
+    title: "Real Time Chat App",
+    subtitle: "WebSockets",
+    description:
+      "A real-time group chat application built with Socket.io that enables instant messaging, typing indicators, and seamless bidirectional communication between multiple users. Developed using React.js, Express.js, and Node.js with a responsive Tailwind CSS interface for a smooth chat experience.",
+    tech: [
+      "React.js",
+      "Socket.io",
+      "Express.js",
+      "Node.js",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/Ayush-0247/web-socke-group-chat",
+    featured: false,
+    metric: { label: "Timeline", value: "Jun 2025 – Jul 2025" },
+  },
+  {
+    id: "ai-cv-scanner",
+    title: "AI CV Scanner",
+    subtitle: "AI-Powered Resume Analysis",
+    description:
+      "An AI-powered resume scanner that analyzes CVs for ATS compatibility, skills, missing keywords, and improvement suggestions using Google AI Studio (Gemini) API and Claude AI.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Google AI Studio",
+      "Gemini API",
+      "Claude AI",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/Ayush-0247/your-repository-name",
+    featured: false,
+    metric: { label: "Status", value: "AI Powered" },
+  },
   {
     id: "mission-control-lite",
     title: "Satellite Telemetry Syatem",
     subtitle: "Satellite Telemetry Monitoring System",
     description:
       "Built a real-time dashboard to track and visualize sensor data including computational temperatures, load points, and operational line voltage thresholds. Uses JWT-secured RESTful APIs and a scalable backend architecture for continuous analytics.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Chart.js", "WebSockets"],
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Chart.js",
+      "WebSockets",
+    ],
     liveUrl: null,
     githubUrl: "https://github.com/Ayush-0247/mission-control-lite",
     featured: false,
@@ -69,8 +105,6 @@ const PROJECTS_DATA = [
     featured: false,
     metric: { label: "Timeline", value: "Aug 2025 – Oct 2025" },
   },
- 
-
 ];
 
 const Project = () => {
