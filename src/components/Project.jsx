@@ -26,9 +26,28 @@ const PROJECTS_DATA = [
     featured: false,
     metric: { label: "Core Focus", value: "Verification" },
   },
+{
+  id: "real-time-chat-app",
+  title: "Real Time Chat App",
+  subtitle: "WebSockets",
+  description:
+    "A real-time group chat application built with Socket.io that enables instant messaging, typing indicators, and seamless bidirectional communication between multiple users. Developed using React.js, Express.js, and Node.js with a responsive Tailwind CSS interface for a smooth chat experience.",
+  tech: [
+    "React.js",
+    "Socket.io",
+    "Express.js",
+    "Node.js",
+    "JavaScript",
+    "Tailwind CSS",
+  ],
+  liveUrl: null,
+  githubUrl: "https://github.com/Ayush-0247/web-socke-group-chat",
+  featured: false,
+  metric: { label: "Timeline", value: "Jun 2025 – Jul 2025" },
+},
   {
     id: "mission-control-lite",
-    title: "Mission Control Lite",
+    title: "Satellite Telemetry Syatem",
     subtitle: "Satellite Telemetry Monitoring System",
     description:
       "Built a real-time dashboard to track and visualize sensor data including computational temperatures, load points, and operational line voltage thresholds. Uses JWT-secured RESTful APIs and a scalable backend architecture for continuous analytics.",
@@ -50,30 +69,8 @@ const PROJECTS_DATA = [
     featured: false,
     metric: { label: "Timeline", value: "Aug 2025 – Oct 2025" },
   },
-  {
-    id: "community-notice-board",
-    title: "Community Notice Board",
-    subtitle: "Full-Stack CRUD Application",
-    description:
-      "Engineered a full-stack notice board with secure authentication, role-based access controls, a dynamic React UI, and optimized mobile responsiveness for seamless community engagement.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    liveUrl: null,
-    githubUrl: "https://github.com/Ayush-0247/community-board",
-    featured: false,
-    metric: { label: "Timeline", value: "June 2025 – Sept 2025" },
-  },
-  {
-    id: "restaurant-frontend",
-    title: "Restaurant Frontend Website",
-    subtitle: "Responsive UI/UX Build",
-    description:
-      "Built a responsive and visually appealing restaurant website featuring clean navigation, reusable components, and an optimized interface across multiple screen sizes.",
-    tech: ["React.js", "Tailwind CSS", "JavaScript", "HTML"],
-    liveUrl: null,
-    githubUrl: "https://github.com/Ayush-0247/restaurant-ui",
-    featured: false,
-    metric: { label: "Timeline", value: "Jun 2025 – July 2025" },
-  },
+ 
+
 ];
 
 const Project = () => {
