@@ -88,23 +88,23 @@ const PROJECTS_DATA = [
       "Chart.js",
       "WebSockets",
     ],
-    liveUrl: null,
-    githubUrl: "https://github.com/Ayush-0247/mission-control-lite",
+    liveUrl: "https://satellite-telemetry-frontend-qr67.vercel.app/",
+    githubUrl: "https://github.com/Ayush-0247/satellite-data-telemetry-project",
     featured: false,
     metric: { label: "Timeline", value: "Dec 2025 – Feb 2026" },
   },
-  {
-    id: "border-surveillance",
-    title: "Smart Border Surveillance Simulation",
-    subtitle: "Real-Time Detection & Alert System",
-    description:
-      "Developed a real-time monitoring system featuring automated alert generation and multi-category detection logic for humans, vehicles, and animals utilizing a scalable database structure.",
-    tech: ["Node.js", "Express.js", "MongoDB", "REST API"],
-    liveUrl: null,
-    githubUrl: "https://github.com/Ayush-0247/border-surveillance",
-    featured: false,
-    metric: { label: "Timeline", value: "Aug 2025 – Oct 2025" },
-  },
+  // {
+  //   id: "border-surveillance",
+  //   title: "Smart Border Surveillance Simulation",
+  //   subtitle: "Real-Time Detection & Alert System",
+  //   description:
+  //     "Developed a real-time monitoring system featuring automated alert generation and multi-category detection logic for humans, vehicles, and animals utilizing a scalable database structure.",
+  //   tech: ["Node.js", "Express.js", "MongoDB", "REST API"],
+  //   liveUrl: null,
+  //   githubUrl: "https://github.com/Ayush-0247/border-surveillance",
+  //   featured: false,
+  //   metric: { label: "Timeline", value: "Aug 2025 – Oct 2025" },
+  // },
 ];
 
 const Project = () => {
@@ -200,7 +200,7 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-white text-slate-700 border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-[12px] font-bold px-5 py-2.5 rounded-xl transition-all shadow-xs"
                   >
-                    {/* <Github size={14} /> Source */}
+                    Source Code
                   </a>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-slate-500 hover:text-blue-600 transition-colors"
                   >
-                    {/* <Github size={13} /> Code Repository */}
+                    Code Repository
                   </a>
                 </div>
               </div>
