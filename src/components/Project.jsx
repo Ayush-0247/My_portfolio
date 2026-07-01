@@ -9,8 +9,8 @@ const PROJECTS_DATA = [
     description:
       "An intelligent asset and portfolio monitoring system engineered for high-throughput transactional records. Deployed secure backend processing models to evaluate digital asset trends with granular transparency.",
     tech: ["React", "Node.js", "Prisma", "TypeScript", "Solidity"],
-    liveUrl: "https://ciphervest.capital",
-    githubUrl: "https://github.com/Ayush-0247/ciphervest-core",
+    liveUrl: "https://www.ciphervestcapital.in/",
+    githubUrl: "https://github.com/Ayush-0247/ciphervest-backend",
     featured: true,
     metric: { label: "Launch Target", value: "Q2 2026" },
   },
